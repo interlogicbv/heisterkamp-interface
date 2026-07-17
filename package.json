@@ -1,0 +1,26 @@
+{
+  "name": "heisterkamp-interface",
+  "version": "1.0.0",
+  "description": "Haalt periodiek JSON op van een API en schrijft deze weg als XML-bestand",
+  "type": "module",
+  "main": "dist/index.js",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "node --env-file-if-exists=.env --watch src/index.ts",
+    "start": "node --env-file-if-exists=.env src/index.ts",
+    "once": "node --env-file-if-exists=.env src/index.ts --once",
+    "build": "tsc",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "fast-xml-parser": "^5.2.5",
+    "mssql": "^12.7.0"
+  },
+  "devDependencies": {
+    "@types/mssql": "^12.3.0",
+    "@types/node": "^24.0.0",
+    "typescript": "^5.8.0"
+  }
+}
